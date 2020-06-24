@@ -176,7 +176,7 @@ public class PlayerManager : MonoBehaviourPunCallbacks, Photon.Pun.IPunObservabl
 /// </summary>
     void Start()
     {
-        CameraWork _cameraWork = this.gameObject.GetComponent<CameraWork>();
+        //CameraWork _cameraWork = this.gameObject.GetComponent<CameraWork>();
     
         if (PlayerUiPrefab != null)
         {
@@ -189,17 +189,17 @@ public class PlayerManager : MonoBehaviourPunCallbacks, Photon.Pun.IPunObservabl
         }
 
 
-        if (_cameraWork != null)
-        {
-            if (photonView.IsMine)
-            {
-                _cameraWork.OnStartFollowing();
-            }
-        }
-        else
-        {
-            Debug.LogError("<Color=Red><a>Missing</a></Color> CameraWork Component on playerPrefab.", this);
-        }
+        //if (_cameraWork != null)
+        //{
+        //    if (photonView.IsMine)
+        //    {
+        //        _cameraWork.OnStartFollowing();
+        //    }
+        //}
+        //else
+        //{
+        //    Debug.LogError("<Color=Red><a>Missing</a></Color> CameraWork Component on playerPrefab.", this);
+        //}
         #if UNITY_5_4_OR_NEWER
         // Unity 5.4 has a new scene management. register a method to call CalledOnLevelWasLoaded.
         UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
